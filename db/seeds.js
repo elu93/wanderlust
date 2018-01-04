@@ -24,7 +24,7 @@ User.remove({}).then(() => {
         email: 'lujb1993@gmail.com',
         firstName: 'Eric',
         lastName: 'Lu',
-        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg'
+        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
     })
 
     const escapacades = new Journal({
@@ -37,7 +37,7 @@ User.remove({}).then(() => {
         city: 'Hong Kong',
     })
 
-    escapacades.posts.concat(vacation)
+    escapacades.posts.push(vacation)
 
     const guide = new Journal({
         name: 'Guide to Japan',
@@ -49,9 +49,9 @@ User.remove({}).then(() => {
         city: 'Japan',
     })
 
-    guide.posts.concat(japanGuide)
+    guide.posts.push(japanGuide)
 
-    eric.journals.concat(escapacades, guide)
+    eric.journals.push(escapacades, guide)
 
     return eric.save()
 }).then(() => {
@@ -74,9 +74,9 @@ User.remove({}).then(() => {
         city: 'London'
     })
 
-    backpacking.posts.concat(londonEscape)
+    backpacking.posts.push(londonEscape)
 
-    phil.journals.concat(backpacking)
+    phil.journals.push(backpacking)
 
     return phil.save()
 }).catch((error) => {

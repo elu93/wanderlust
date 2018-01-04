@@ -1,0 +1,28 @@
+<div class="stepper">
+  <a href="/users">Home</a> /
+  <a href="/users/{{userId}}">Profile</a> /
+  <a href="/users/{{userId}}/stores">Stores</a> / New Store
+</div>
+
+<div class="card">
+
+  <h2>Add A New Journal:</h2>
+  <div>
+    <form action="/users/{{userId}}/journals" method="POST">
+      <div class="form-input">
+        <label for="name">Journal Name:</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-input">
+        <label for="category">Category Address:</label>
+        <input type="text" name="category">
+      </div>
+
+      <div>
+        <input type="submit" value="Create Journal">
+        <a href="/users/{{user._id}}" class="button warning">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

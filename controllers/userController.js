@@ -35,8 +35,8 @@ router.post('/', (req, res) => {
 })
 
 // SHOW SPECIFIC USER
-router.get('/:id', (req, res) => {
-  const userId = req.params.id
+router.get('/:userId', (req, res) => {
+  const userId = req.params.userId
   User.findById(userId)
   .then((user) => {
     res.render('users/show', {
@@ -49,8 +49,8 @@ router.get('/:id', (req, res) => {
 })
 
 // UPDATE SPECIFIC USER
-router.get('/:id/edit', (req, res) => {
-  const userId = req.params.id
+router.get('/:userId/edit', (req, res) => {
+  const userId = req.params.userId
   User.findById(userId)
   .then((user) => {
     res.render('users/edit', {
@@ -63,8 +63,8 @@ router.get('/:id/edit', (req, res) => {
 })
 
 
-router.put('/:id', (req, res) => {
-  const userId = req.params.id
+router.put('/:userId', (req, res) => {
+  const userId = req.params.userId
   const userData = req.body
   User.findByIdAndUpdate(userId, userData)
   .then((user) => {
@@ -75,8 +75,8 @@ router.put('/:id', (req, res) => {
   })
 })
 
-router.delete('/:id/delete', (req, res) => {
-  const userId = req.params.id
+router.delete('/:userId/delete', (req, res) => {
+  const userId = req.params.userId
   User.findByIdAndRemove(userId)
   .then(() => {
     res.redirect('/')

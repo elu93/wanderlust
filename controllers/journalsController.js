@@ -7,16 +7,23 @@ const User = require('../db/models/User')
 
 // SHOW JOURNALS ROUTE
 router.get('/', (req, res) => {
-  const userId = req.params.id
+  const userId = req.params.userId
   User.findById(userId)
-  .then((user) => {
-    console.log(`JOURNALS ${user.journals}`)
-    res.render('journals/index', {
-      userFullName: `${user.firstName} ${user.lastName}`,
-      userId,
-      journals: user.journals
+    .then((user) => {
+      res.render('journals/index', {
+        userFullName: `${user.firstName} ${user.lastName}`,
+        userId,
+        journals: user.journals
+      })
     })
-  })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+// CRATE NEW JOURNAL
+router.get('/new', (req, res) => {
+  res.render('journals/new')
 })
 
 

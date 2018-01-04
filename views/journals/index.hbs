@@ -1,23 +1,23 @@
 <div class="stepper">
   <a href="/users">Home</a> /
-  <a href="/users/{{userId}}">Profile</a> / Stores
+  <a href="/users/{{userId}}">Profile</a> / Journals
 </div>
 
 <div class="store-header">
-  <h1>{{userFullName}}'s Stores</h1>
+  <h1>{{userFullName}}'s Journal</h1>
   <div class="button primary">
-    <a href="/users/{{userId}}/stores/new">Add a new store</a>
+    <a href="/users/{{userId}}/journals/new">Add a new journal</a>
   </div>
 </div>
 
 <div class="stores">
-  {{#each stores}}
+  {{#each journals}}
   <div class="store card">
-    <a class="cancel" href="/users/{{../userId}}/stores/{{this._id}}/delete">X</a>
-    <a href="/users/{{../userId}}/stores/{{this._id}}">
+    <a class="cancel" href="/users/{{../userId}}/journals/{{this._id}}/delete">X</a>
+    <a href="/users/{{../userId}}/journals/{{this._id}}">
       <h3>{{this.name}}</h3>
     </a>
-    <p>{{journals}}</p>
+    <p>{{this.category}}</p>
 
     
   </div>
