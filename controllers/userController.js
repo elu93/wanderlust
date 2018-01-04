@@ -34,5 +34,22 @@ router.post('/', (req, res) => {
   })
 })
 
+// SHOW SPECIFIC USER
+router.get('/:id', (req, res) => {
+  const userId = req.params.id
+  User.findById(userId)
+  .then((user) => {
+    console.log(`${user}`)
+    res.render('users/show', {
+      user
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+// UPDATE SPECIFIC USER
+
 
 module.exports = router;
