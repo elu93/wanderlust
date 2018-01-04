@@ -14,8 +14,10 @@
       <div class="button primary">
         <a href="/users/{{user._id}}/edit">Update INFO</a>
       </div>
-      <div class="button warning">
-        <a href="/users/{{user._id}}/delete">Delete ME</a>
+      <div>
+        <form action="/users/{{user._id}}/delete?_method=DELETE" method="POST">
+          <input class="button" type="submit" value="DELETE User">
+        </form>
       </div>
     </div>
     <div>Username:

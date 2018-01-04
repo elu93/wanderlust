@@ -39,7 +39,6 @@ router.get('/:id', (req, res) => {
   const userId = req.params.id
   User.findById(userId)
   .then((user) => {
-    console.log(`${user}`)
     res.render('users/show', {
       user
     })
@@ -70,6 +69,17 @@ router.put('/:id', (req, res) => {
   User.findByIdAndUpdate(userId, userData)
   .then((user) => {
     res.redirect(`/users/${userId}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+router.delete('/:id/delete', (req, res) => {
+  const userId = req.params.id
+  User.findByIdAndRemove(userId)
+  .then(() => {
+    res.redirect('/')
   })
   .catch((error) => {
     console.log(error)
