@@ -23,7 +23,26 @@ router.get('/', (req, res) => {
 
 // CRATE NEW JOURNAL
 router.get('/new', (req, res) => {
-  res.render('journals/new')
+  const userId = req.params.userId
+  res.render('journals/new', {
+    userId
+  })
+})
+
+router.post('/', (req, res) => {
+  const userId = req.params.userId
+  const newJournal = req.body
+  User.findById(userId)
+  .then((user) => {
+    user.journals.push(newJournal)
+    return user.save()
+  })
+  .then(() => {
+    res.redirect(`/users/${userId}/journals`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 })
 
 

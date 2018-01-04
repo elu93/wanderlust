@@ -1,7 +1,7 @@
 <div class="stepper">
   <a href="/users">Home</a> /
   <a href="/users/{{userId}}">Profile</a> /
-  <a href="/users/{{userId}}/stores">Stores</a> / New Store
+  <a href="/users/{{userId}}/journals">Journals</a> / New Journal
 </div>
 
 <div class="card">
@@ -15,10 +15,9 @@
       </div>
 
       <div class="form-input">
-        <label for="category">Category Address:</label>
+        <label for="category">Journal Category:</label>
         <input type="text" name="category">
       </div>
-
       <div>
         <input type="submit" value="Create Journal">
         <a href="/users/{{user._id}}" class="button warning">Cancel</a>
