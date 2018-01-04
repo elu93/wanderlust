@@ -63,28 +63,30 @@ User.remove({}).then(() => {
         lastName: 'Lu',
         photoUrl: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg'
     })
-}).then((gob) => {
-    const magicStore = new Store({
-        name: 'The Magic Store',
-        address: 'over there'
+}).then((phil) => {
+    const backpacking = new Journal({
+        name: 'Europe Backpacking',
+        category: 'Backpacking'
     })
 
-    const petSmart = new Store({
-        name: 'PetSmart',
-        address: '123 Sesame St'
+    const londonEscape = new Post({
+        name: 'Backpacking in London',
+        image: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg',
+        city: 'London'
     })
 
-    gob.stores.concat(magicStore, petSmart)
+    backpacking.posts.concat(londonEscape)
 
-    return gob.save()
+    phil.journals.concat(backpacking)
+
+    return phil.save()
 }).catch((error) => {
     console.log('!!!!! ERROR SAVING SEEDED DATA !!!!!')
     console.log(error)
 }).then(() => {
     mongoose.connection.close()
     console.log(`
-      Finished seeding database...
-      
-      Disconnected from MongoDB
+    Finished seeding database...
+    Disconnected from MongoDB
     `)
 })
