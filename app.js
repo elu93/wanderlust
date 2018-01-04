@@ -15,6 +15,9 @@ mongoose.connection.once('open', () => {
   console.log("Connected to MongoDB!!!")
 })
 
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

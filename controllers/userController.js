@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../db/models/User')
 
-/* GET users listing. */
+// SHOW ALL USERS
 router.get('/', (req, res) => {
   User.find({})
   .then((users) => {
@@ -50,6 +50,30 @@ router.get('/:id', (req, res) => {
 })
 
 // UPDATE SPECIFIC USER
+router.get('/:id/edit', (req, res) => {
+  const userId = req.params.id
+  User.findById(userId)
+  .then((user) => {
+    res.render('users/edit', {
+      user
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 
+
+router.put('/:id', (req, res) => {
+  const userId = req.params.id
+  const userData = req.body
+  User.findByIdAndUpdate(userId, userData)
+  .then((user) => {
+    res.redirect(`/users/${userId}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 
 module.exports = router;
