@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const userController = require('./controllers/userController');
-
+const journalsController = require('./controllers/journalsController')
 const app = express();
 
 const mongoose = require('mongoose');
@@ -31,6 +31,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', userController);
+app.use('/users/:id/journals', journalsController)
+
 app.get('/', (req, res) => {
   res.redirect('/users')
 })
