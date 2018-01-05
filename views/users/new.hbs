@@ -1,35 +1,37 @@
 <div class="main">
-  <h2>User Info</h2>
-  <div>
+  <div class="sign-up">
+
+          
+    <h2>User Info</h2>
     <form action="/users" method="POST">
-      <div class="form-input">
+      <div class="input-field">
         <label for="username">Username</label>
-        <input type="text" name="username" required/>
+        <input type="text" name="username" class="validate" required/>
       </div>
 
-      <div class="form-input">
-        <label for="email">Email</label>
-        <input type="text" name="email" />
+      <div class="input-field">
+        <label class="text-white"for="email">Email</label>
+        <input type="text" name="email" class="validate" required/>
       </div>
 
-      <div class="form-input">
+      <div class="input-field">
         <label for="firstName">First Name</label>
-        <input type="text" name="firstName" required/>
+        <input type="text" name="firstName" class="validate" required/>
       </div>
 
-      <div class="form-input">
+      <div class="input-field">
         <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" required/>
+        <input type="text" name="lastName" class="validate" required/>
       </div>
 
-      <div class="form-input">
+      <div class="input-field">
         <label for="photoUrl">Photo Url</label>
-        <input type="text" name="photoUrl" />
+        <input type="text" name="photoUrl" class= "validate"/>
       </div>
-      <div class="button-container flex-end">
-        <input class="button primary" type="submit" value="Create User">
+      <div>
+        <input class="waves-effect waves-light indigo darken-4" type="submit" value="Create User">
         <a href="/users" class="button warning">Cancel</a>
       </div>
     </form>
   </div>
-</div>
+</div>  
