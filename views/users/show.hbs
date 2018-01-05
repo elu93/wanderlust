@@ -1,29 +1,32 @@
-
 <div class="main">
-  
-  <div class="description">
-    <h1>{{user.firstName}} {{user.lastName}}</h1>
-    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo">
-  </div>
-  <div class="user-info">
-    <div>
-      <div>
-        <a href="/users/{{user._id}}/edit">Update INFO</a>
+  <div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo">
       </div>
-      <div>
-        <form action="/users/{{user._id}}/delete?_method=DELETE" method="POST">
-          <input class="button" type="submit" value="DELETE User">
+      <div class="card-stacked">
+        <div class="card-content">
+          <div>Username:
+            <strong>{{user.username}}</strong>
+          </div>
+          <div>Name:
+            <strong>{{user.firstName}} {{user.lastName}}</strong>
+          </div>
+          <div>Email:
+            <strong>{{user.email}}</strong>
+          </div>
+          <div>
+            <a href="/users/{{user._id}}/edit">Update User Info</a>
+            <form action="/users/{{user._id}}/delete?_method=DELETE" method="POST">
+          <input class="waves-effect waves-light red darken-4" type="submit" value="DELETE User">
         </form>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="/users/{{user._id}}/journals">View Journals</a>
+        </div>
       </div>
-    </div>
-    <div>Username:
-      <strong>{{user.username}}</strong>
-    </div>
-    <div>Email:
-      <strong>{{user.email}}</strong>
-    </div>
-    <div class="visit-journal">
-      <a href="/users/{{user._id}}/journals">{{user.firstName}} {{user.lastName}}'s Journals</a>
     </div>
   </div>
 </div>
