@@ -3,10 +3,30 @@ const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
+const allPostsSchema = new Schema({
+    name: {
+        type: String,
+        required: [true, 'Post title is required!']
+    },
+    image: {
+        type: String,
+        default: 'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
+    },
+    city: {
+        type: String
+    },
+    body: {
+        type: String
+    }
+}, {
+    timestamps: {},
+    usePushEach: true
+})
+
 const PostSchema = new Schema({
     name: {
         type: String,
-        required: [true, 'Gift title is required!']
+        required: [true, 'Post title is required!']
     },
     image: {
         type: String,

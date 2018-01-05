@@ -1,6 +1,7 @@
 const User = require('./models/User')
 const Journal = require('./models/Journal')
 const Post = require('./models/Post')
+const AllPosts = require('./models/allPosts')
 const mongoose = require('mongoose')
 
 // connect to database
