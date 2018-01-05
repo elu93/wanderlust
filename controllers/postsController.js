@@ -23,6 +23,25 @@ router.get('/new', (req, res) => {
         })
 })
 
+router.post('/', (req, res) => {
+    const userId = req.params.userId
+    const journalId = req.params.journalId
+    const newPost = req.body
+    User.findById(userId)
+        .then((user) => {
+            const journal = user.journals.id(journalId)
+            journal.posts.push(newPost)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${userId}/journals/${journalId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+
 // GET SPECIFIC POST ROUTE
 router.get('/:postId', (req, res) => {
     const userId = req.params.userId
@@ -44,39 +63,21 @@ router.get('/:postId', (req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
+
+// DELETE POST ROUTE
+router.get('/:postId/delete', (req, res) => {
     const userId = req.params.userId
-    const journal = req.params.journalId
-
-    const newGift = req.body
-
+    const journalId = req.params.journalId
+    const postId = req.params.postId
     User.findById(userId)
         .then((user) => {
-            const store = user.stores.id(storeId)
-            store.giftsToReturn.push(newGift)
+            const journal = user.journals.id(journalId)
+            journal.posts.id(postId).remove()
 
             return user.save()
         })
         .then(() => {
-            res.redirect(`/users/${userId}/stores/${storeId}`)
-        })
-})
-
-// DELETE GIFT ROUTE
-router.get('/:giftId/delete', (req, res) => {
-    const userId = req.params.userId
-    const storeId = req.params.storeId
-    const giftId = req.params.giftId
-
-    User.findById(userId)
-        .then((user) => {
-            const store = user.stores.id(storeId)
-            store.giftsToReturn.id(giftId).remove()
-
-            return user.save()
-        })
-        .then(() => {
-            res.redirect(`/users/${userId}/stores/${storeId}`)
+            res.redirect(`/users/${userId}/journals/${journalId}`)
         })
         .catch((error) => {
             console.log(error)
