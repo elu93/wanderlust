@@ -1,10 +1,4 @@
-<div class="stepper">
-  <a href="/users">Home</a> /
-  <a href="/users/{{userId}}">Profile</a> /
-  <a href="/users/{{userId}}/journals">journals</a> /
-  <a href="/users/{{userId}}/journals/{{journal._id}}">{{journal.name}}</a>
-</div>
-<div class="card">
+<div class="journal-main">
   <form action="/users/{{userId}}/journals/{{journal._id}}/posts" method="POST">
     <h2>New Post</h2>
     <div class="form-input">

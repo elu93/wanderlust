@@ -1,28 +1,17 @@
-<div class="stepper">
-  <a href="/users">Home</a> /
-  <a href="/users/{{userId}}">Profile</a> / Journals
-</div>
-
-<div class="store-header">
+<div class="journal-main">
   <h1>{{userFullName}}'s Journal</h1>
   <div class="button primary">
     <a href="/users/{{userId}}/journals/new">Add a new journal</a>
   </div>
-</div>
-
-<div class="journals">
-  {{#each journals}}
-  <div class="store card">
-    <div>
-      <a href="/users/{{../userId}}/journals/{{this._id}}">
-        <h3>{{this.name}}</h3>
-      </a>
-      
-
+  <div class="journals">
+    {{#each journals}}
+    <div class="store card">
+      <div>
+        <a href="/users/{{../userId}}/journals/{{this._id}}">
+          <h3>{{this.name}}</h3>
+        </a>
+      </div>
     </div>
-
-
-
   </div>
   {{/each}}
 </div>
