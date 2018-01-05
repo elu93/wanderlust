@@ -6,7 +6,6 @@ const User = require('../db/models/User')
 router.get('/', (req, res) => {
   User.find({})
   .then((users) => {
-    console.log(users)
     res.render('users/index', {
       users
     })

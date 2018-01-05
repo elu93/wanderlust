@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-=======
-<div class="stepper">
-    ALL USERS PAGE
-</div>
->>>>>>> parent of 0ea6256... Created fixed nav bar
 <div>
-  <div>
+  <div class="main">
     {{#each users}}
     <a href="/users/{{this._id}}">
       <div>
         {{#if this.photoUrl}}
-          <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
+          <img class="pro-pics" src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
         {{else}}
           <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> 
         {{/if}}
       </div>
+      </a>
       <div>
-        {{this.firstName}} {{this.lastName}} {{this.journals.blogs.name}}
+        {{this.firstName}} {{this.lastName}}
       </div>
-    </a>
+    
     {{/each}}
   </div>
 

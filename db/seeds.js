@@ -1,7 +1,6 @@
 const User = require('./models/User')
 const Journal = require('./models/Journal')
 const Post = require('./models/Post')
-const AllPosts = require('./models/allPosts')
 const mongoose = require('mongoose')
 
 // connect to database
@@ -39,6 +38,7 @@ User.remove({}).then(() => {
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
+    
     escapacades.posts.push(vacation)
 
     const guide = new Journal({
