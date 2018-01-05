@@ -5,6 +5,24 @@ const router = express.Router({
 
 const User = require('../db/models/User')
 
+// CREATE ADD ROUTE
+router.get('/new', (req, res) => {
+    const userId = req.params.userId
+    const journalId = req.params.journalId
+
+    User.findById(userId)
+        .then((user) => {
+            const journal = user.journals.id(journalId)
+            res.render('posts/new', {
+                userId,
+                journal
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
 // GET SPECIFIC POST ROUTE
 router.get('/:postId', (req, res) => {
     const userId = req.params.userId
@@ -26,30 +44,9 @@ router.get('/:postId', (req, res) => {
     })
 })
 
-
-
-
-// CREATE POST ROUTE
-
-router.get('/new', (req, res) => {
-    const userId = req.params.userId
-    const storeId = req.params.storeId
-
-    User.findById(userId)
-        .then((user) => {
-            const store = user.stores.id(storeId)
-
-            res.render('gifts/new', {
-                userId,
-                store,
-                pageTitle: 'New_Gift'
-            })
-        })
-})
-
 router.post('/', (req, res) => {
     const userId = req.params.userId
-    const storeId = req.params.storeId
+    const journal = req.params.journalId
 
     const newGift = req.body
 
