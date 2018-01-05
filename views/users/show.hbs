@@ -1,17 +1,13 @@
-<div class="main">
-  <a href="/users">Home</a> / Profile
-</div>
 
-<h1>{{user.firstName}} {{user.lastName}}</h1>
-<div class="user-container">
-  <div>
-    {{#if user.photoUrl}}
-    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
-    <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
+<div class="main">
+  
+  <div class="description">
+    <h1>{{user.firstName}} {{user.lastName}}</h1>
+    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo">
   </div>
   <div class="user-info">
-    <div class="button-container">
-      <div class="button primary">
+    <div>
+      <div>
         <a href="/users/{{user._id}}/edit">Update INFO</a>
       </div>
       <div>
@@ -26,7 +22,7 @@
     <div>Email:
       <strong>{{user.email}}</strong>
     </div>
-    <div class="visit-store">
+    <div class="visit-journal">
       <a href="/users/{{user._id}}/journals">{{user.firstName}} {{user.lastName}}'s Journals</a>
     </div>
   </div>

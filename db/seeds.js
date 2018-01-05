@@ -24,7 +24,7 @@ User.remove({}).then(() => {
         email: 'lujb1993@gmail.com',
         firstName: 'Eric',
         lastName: 'Lu',
-        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
+        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg'
     })
 
     const escapacades = new Journal({
