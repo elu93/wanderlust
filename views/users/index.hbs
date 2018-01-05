@@ -1,13 +1,15 @@
-<div class="stepper">
-    ALL USERS PAGE
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
 </div>
 <div>
-  <div>
+  <div class="main">
     {{#each users}}
     <a href="/users/{{this._id}}">
       <div>
         {{#if this.photoUrl}}
-          <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
+          <img class= "pro-pics" src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
         {{else}}
           <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> 
         {{/if}}
