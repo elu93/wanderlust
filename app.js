@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const userController = require('./controllers/userController');
 const journalsController = require('./controllers/journalsController')
+const postsController = require('./controllers/postsController')
 const app = express();
 
 const mongoose = require('mongoose');
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', userController);
 app.use('/users/:userId/journals', journalsController)
+app.use('/users/:userId/journals/:journalId/posts', postsController)
 
 app.get('/', (req, res) => {
   res.redirect('/users')

@@ -1,0 +1,18 @@
+<div class="stepper">
+  <a href="/users">Home</a> /
+  <a href="/users/{{userId}}">Profile</a> /
+  <a href="/users/{{userId}}/journals">Journal</a> /
+  <a href="/users/{{userId}}/journals/{{journal._id}}">{{post.name}}</a> / Posts
+</div>
+
+<div class="user-container">
+  <div>
+    <img src="{{post.image}}" alt="">
+  </div>
+  <div class="user-info">
+    <h1>{{post.name}}</h1>
+    <div>City: {{post.city}}</div>
+    <div> {{post.body}}</div>
+    <a class="button warning" href="/users/{{userId}}/stores/{{store._id}}/gifts/{{gift._id}}/delete">Delete</a>
+  </div>
+</div>

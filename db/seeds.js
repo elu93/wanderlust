@@ -35,6 +35,7 @@ User.remove({}).then(() => {
         name: 'Why I loved Hong Kong',
         image: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
         city: 'Hong Kong',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
     escapacades.posts.push(vacation)
@@ -47,6 +48,7 @@ User.remove({}).then(() => {
         name: 'The must see things in Japan',
         image: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
         city: 'Japan',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
     guide.posts.push(japanGuide)
@@ -71,7 +73,8 @@ User.remove({}).then(() => {
     const londonEscape = new Post({
         name: 'Backpacking in London',
         image: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg',
-        city: 'London'
+        city: 'London',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
     backpacking.posts.push(londonEscape)

@@ -9,9 +9,13 @@ const PostSchema = new Schema({
         required: [true, 'Gift title is required!']
     },
     image: {
-        type: String
+        type: String,
+        default: 'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
     },
     city: {
+        type: String
+    },
+    body: {
         type: String
     }
 }, {
