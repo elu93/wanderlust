@@ -1,19 +1,13 @@
 <div>
   <div class="main">
     {{#each users}}
-    <a href="/users/{{this._id}}">
-      <div>
-        {{#if this.photoUrl}}
-          <img class="pro-pics" src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
-        {{else}}
-          <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> 
-        {{/if}}
-      </div>
-      </a>
-      <div>
+      <div class="profiles">
+          <a href="/users/{{this._id}}"><img class="pro-pics" src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"></a> 
+          <div>
         {{this.firstName}} {{this.lastName}}
       </div>
-    
+      </div>
+      
     {{/each}}
   </div>
 
