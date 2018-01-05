@@ -10,16 +10,19 @@
   </div>
 </div>
 
-<div class="stores">
+<div class="journals">
   {{#each journals}}
   <div class="store card">
-    <a class="cancel" href="/users/{{../userId}}/journals/{{this._id}}/delete">X</a>
-    <a href="/users/{{../userId}}/journals/{{this._id}}">
-      <h3>{{this.name}}</h3>
-    </a>
-    <p>{{this.category}}</p>
+    <div>
+      <a href="/users/{{../userId}}/journals/{{this._id}}">
+        <h3>{{this.name}}</h3>
+      </a>
+      
 
-    
+    </div>
+
+
+
   </div>
   {{/each}}
 </div>

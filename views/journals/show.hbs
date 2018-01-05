@@ -1,0 +1,31 @@
+<div class="stepper">
+  <a href="/users">Home</a> /
+  <a href="/users/{{userId}}">Profile</a> /
+  <a href="/users/{{userId}}/journals">Journals</a> / {{journal.name}}
+</div>
+
+<div class="store-header">
+  <div>
+    <h1>{{journal.name}}</h1>
+    <h3>{{journal.category}}</h3>
+  </div>
+      <a href="/users/{{userId}}/journals/{{journal._id}}/delete">Delete</a>
+</div>
+
+<div>
+  <div class="gift-header">
+    <h3>Gifts To Return:</h3>
+    <a class="button primary" href="/users/{{userId}}/journals/{{journal._id}}/posts/new">Add a Post</a>
+  </div>
+
+  <div class="gifts">
+    {{#each journal.posts}}
+      <div class="gift">
+        <a href="/users/{{../userId}}/journals/{{../journal._id}}/posts/{{this._id}}">
+          {{this.name}}
+        </a>
+      </div>
+    {{/each}}
+  </div>
+
+</div>

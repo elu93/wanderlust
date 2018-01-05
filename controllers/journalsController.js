@@ -5,7 +5,7 @@ const router = express.Router({
 const User = require('../db/models/User')
 
 
-// SHOW JOURNALS ROUTE
+// SHOW ALL JOURNALS ROUTE
 router.get('/', (req, res) => {
   const userId = req.params.userId
   User.findById(userId)
@@ -35,6 +35,38 @@ router.post('/', (req, res) => {
   User.findById(userId)
   .then((user) => {
     user.journals.push(newJournal)
+    return user.save()
+  })
+  .then(() => {
+    res.redirect(`/users/${userId}/journals`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+// SHOW SPECIFIC JOURNAL
+router.get('/:journalId', (req, res) => {
+  const userId = req.params.userId
+  const journalId = req.params.journalId
+
+  User.findById(userId)
+  .then((user) => {
+    const journal = user.journals.id(journalId)
+    res.render('journals/show', {
+      userId,
+      journal
+    })
+  })
+})
+
+// DELETE JOURNAL
+router.get('/:journalId/delete', (req, res) => {
+  const userId = req.params.userId
+  const journalId = req.params.journalId
+  User.findById(userId)
+  .then((user) => {
+    user.journals.id(journalId).remove()
     return user.save()
   })
   .then(() => {
