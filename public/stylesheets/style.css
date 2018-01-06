@@ -105,3 +105,38 @@ a {
 .journal-head {
   padding-left: 25px; 
 }
+
+.post-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.post-container {
+  height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.journal-action {
+  margin: 2%;
+}
+
+.journal-posts {
+  width: 100px;
+  height: 100px;
+}
+
+.journal-posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10%;
+}
+
+.post-content {
+  padding: 15px;
+}

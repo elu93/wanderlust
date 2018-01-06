@@ -1,23 +1,29 @@
-<div class="journal-main">
-  <div>
-    <h1>{{journal.name}}</h1>
-    <h3>{{journal.category}}</h3>
-  </div>
-  <a href="/users/{{userId}}/journals/{{journal._id}}/delete">Delete</a>
-  <div>
+<div class="post-container">
+  <div class="post-display">
+    <div class="journal-action">
+      <a href="/users/{{userId}}/journals/{{journal._id}}/delete">Delete this Journal</a>
+    </div>
     <div>
-      <h3>{{user.firstName}}'s Posts</h3>
-      <a class="button primary" href="/users/{{userId}}/journals/{{journal._id}}/posts/new">Add a Post</a>
-    </div>
-    <div class="gifts">
-      {{#each journal.posts}}
-      <div class="gift">
-        <a href="/users/{{../userId}}/journals/{{../journal._id}}/posts/{{this._id}}">
-          {{this.name}}
-        </a>
+      <div class="journal-title">
+        <h5>title: {{journal.name}}</h5>
       </div>
-      {{/each}}
+      <p class="journal-category">category: {{journal.category}}</p>
     </div>
-
+    <div>
+      <div>
+        <h3>Posts</h3>
+      </div>
+      <div class="journal-action">
+        <a class="button primary" href="/users/{{userId}}/journals/{{journal._id}}/posts/new">Add a Post</a>
+      </div>
+      <div class="journal-posts-wrapper">
+        {{#each journal.posts}}
+        <div>
+          <a class="valign-wrapper" href="/users/{{../userId}}/journals/{{../journal._id}}/posts/{{this._id}}">
+            <img class="journal-posts" src="{{this.image}}" alt=""><span class="post-content">{{this.name}}</span></a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
 </div>
