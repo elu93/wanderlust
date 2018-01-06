@@ -1,16 +1,14 @@
 <div class="main">
   <div class="sign-up">
-
-          
     <h2>User Info</h2>
-    <form action="/users" method="POST">
+    <form action="/users" method="POST" id="userform">
       <div class="input-field">
         <label for="username">Username</label>
         <input type="text" name="username" class="validate" required/>
       </div>
 
       <div class="input-field">
-        <label class="text-white"for="email">Email</label>
+        <label class="text-white" for="email">Email</label>
         <input type="text" name="email" class="validate" required/>
       </div>
 
@@ -26,12 +24,16 @@
 
       <div class="input-field">
         <label for="photoUrl">Photo Url</label>
-        <input type="text" name="photoUrl" class= "validate"/>
+        <input type="text" name="photoUrl" class="validate" />
       </div>
       <div>
+        <div class="input-field">
+          <label for="description">User Description</label>
+          <textarea class="validate white-text" rows="4" cols="50" name="description"></textarea>
+        </div>
         <input class="waves-effect waves-light indigo darken-4" type="submit" value="Create User">
         <a href="/users" class="button warning">Cancel</a>
       </div>
     </form>
   </div>
-</div>  
+</div>

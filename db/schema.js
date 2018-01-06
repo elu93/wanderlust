@@ -57,6 +57,9 @@ const UserSchema = new Schema({
         type: String,
         default: '../public/images/eric.png'
     },
+    description: {
+        type: String
+    },
     journals: [JournalSchema]
 }, {
     timestamps: {},

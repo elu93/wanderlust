@@ -47,6 +47,7 @@ a {
 
 /* Main content */
 .main {
+  margin: 10% 25%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -66,9 +67,9 @@ a {
   height: 30vh;
 }
 
-/* .user-info {
-  margin-left: 50px;
-} */
+.user-info {
+  
+}
 
 .journal-main {
   margin-top: 100px;
@@ -80,9 +81,7 @@ a {
   text-align: center;
 }
 
-.row {
-  margin: 10% 25%;
-}
+
 
 .sign-up {
   background-image: url('https://source.unsplash.com/AlscQt7Utz4');
@@ -90,4 +89,8 @@ a {
   padding: 10%;
   border-radius: 3%;
   border: 1px solid black;
+}
+
+.show-top-margin {
+  margin-top: 5%;
 }
