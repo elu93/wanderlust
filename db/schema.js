@@ -10,7 +10,7 @@ const PostSchema = new Schema({
     },
     image: {
         type: String,
-        default: 'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
+        default: 'https://source.unsplash.com/random/'
     },
     city: {
         type: String
@@ -55,7 +55,7 @@ const UserSchema = new Schema({
     },
     photoUrl: {
         type: String,
-        default: '../public/images/eric.png'
+        default: 'https://source.unsplash.com/random/'
     },
     description: {
         type: String

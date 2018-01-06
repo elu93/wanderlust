@@ -23,7 +23,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
   const newUser = req.body
   if (!newUser.photoUrl) {
-    newUser.photoUrl = 'http://www.fillmurray.com/g/300/300'
+    newUser.photoUrl = 'https://source.unsplash.com/random/300x300'
   }
   User.create(newUser)
   .then(() => {

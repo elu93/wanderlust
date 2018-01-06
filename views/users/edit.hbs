@@ -1,35 +1,38 @@
 <div class="main">
-  <h2>Edit User Profile</h2>
-  <div>
+  <div class="sign-up">
+    <h2>Edit User Profile</h2>
     <form action="/users/{{user._id}}?_method=PUT" method="POST">
-      <div class="form-input">
-        <label for="username">Username:</label>
-        <input type="text" name="username" value="{{user.username}}" required/>
+      <div class="input-field">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="validate" value="{{user.username}}" required/>
       </div>
 
-      <div class="form-input">
-        <label for="email">Email:</label>
-        <input type="text" name="email" value="{{user.email}}" />
+      <div class="input-field">
+        <label class="text-white" for="email">Email</label>
+        <input type="text" name="email" class="validate" value="{{user.email}}"required/>
       </div>
 
-      <div class="form-input">
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" value="{{user.firstName}}" required/>
+      <div class="input-field">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" class="validate" value="{{user.firstName}}"required/>
       </div>
 
-      <div class="form-input">
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" value="{{user.lastName}}" required/>
+      <div class="input-field">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" class="validate" value="{{user.lastName}}"required/>
       </div>
 
-      <div class="form-input">
-        <label for="photoUrl">Photo Url:</label>
-        <input type="text" name="photoUrl" value="{{user.photoUrl}}" />
+      <div class="input-field">
+        <label for="photoUrl">Photo Url</label>
+        <input type="text" name="photoUrl" class="validate" value="{{user.photoUrl}}" />
       </div>
-
       <div>
-        <input class="button primary" type="submit" value="Update Profile">
-        <a href="/users/{{user._id}}" class="button warning">Cancel</a>
+        <div class="input-field">
+          <label for="description">User Biography</label>
+          <textarea class="validate white-text" rows="4" cols="50" name="description"></textarea>
+        </div>
+        <input class="waves-effect waves-light indigo darken-4" type="submit" value="Edit User">
+        <a href="/users" class="button warning">Cancel</a>
       </div>
     </form>
   </div>
