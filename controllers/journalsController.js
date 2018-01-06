@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
       res.render('journals/index', {
         userFullName: `${user.firstName} ${user.lastName}`,
         userId,
+        user,
         journals: user.journals
       })
     })

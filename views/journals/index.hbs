@@ -1,17 +1,19 @@
 <div class="journal-main">
-  <h1>{{userFullName}}'s Journal</h1>
-  <div class="button primary">
-    <a href="/users/{{userId}}/journals/new">Add a new journal</a>
-  </div>
-  <div class="journals">
-    {{#each journals}}
-    <div class="store card">
-      <div>
-        <a href="/users/{{../userId}}/journals/{{this._id}}">
-          <h3>{{this.name}}</h3>
-        </a>
-      </div>
+  <img class="journal-pro-image" src="{{user.photoUrl}}" alt="">
+  <h5 class="journal-head">{{userFullName}}'s Journal</h5>
+</div>
+<div class="button primary">
+  <a href="/users/{{userId}}/journals/new">Add a new journal</a>
+</div>
+<div class="journals">
+  {{#each journals}}
+  <div class="store card">
+    <div>
+      <a href="/users/{{../userId}}/journals/{{this._id}}">
+        <h3>{{this.name}}</h3>
+      </a>
     </div>
   </div>
-  {{/each}}
+</div>
+{{/each}}
 </div>
