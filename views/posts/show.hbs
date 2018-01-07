@@ -1,4 +1,4 @@
-<div class="post-container">
+<div class="post-wrapper">
   <div class="post-main">
     <div>
       <div class="post-title">
@@ -8,11 +8,13 @@
         <h5>{{post.postDescription}}</h5>
       </div>
       <img class="image-post" src="{{post.image}}" alt="">
-      <div class="author">
-        <p>By: {{user.firstName}} {{user.lastName}}</p>
+      <div>
+        <p class="author">By: {{user.firstName}} {{user.lastName}}</p>
+        <a class="delete-post" href="/users/{{userId}}/journals/{{journal._id}}/posts/{{post._id}}/delete">Delete Post</a>
       </div>
-      <div> {{post.body}}</div>
-      <a class="button warning" href="/users/{{userId}}/journals/{{journal._id}}/posts/{{post._id}}/delete">Delete</a>
+      <div> 
+        <p class="post-body-paragraphs">{{post.body}}</p>
+      </div>
     </div>
   </div>
 </div>
