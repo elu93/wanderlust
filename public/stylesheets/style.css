@@ -9,7 +9,7 @@ h2:first-child {
   color: white;
 }
 
-input {
+.new-input-form {
   color: white;
 }
 
@@ -187,4 +187,8 @@ a {
   height: 100vh;
   width: 50vw;
   margin: 0 auto;
+}
+
+.valign-wrapper {
+  padding: 10px;
 }
