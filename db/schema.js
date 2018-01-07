@@ -12,7 +12,7 @@ const PostSchema = new Schema({
         type: String,
         default: 'https://source.unsplash.com/random/'
     },
-    city: {
+    postDescription: {
         type: String
     },
     body: {

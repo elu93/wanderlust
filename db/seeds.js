@@ -24,7 +24,8 @@ User.remove({}).then(() => {
         email: 'lujb1993@gmail.com',
         firstName: 'Eric',
         lastName: 'Lu',
-        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg'
+        photoUrl: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
+        description: 'I am a 24 year old ex-management consultant that loves to travel.'
     })
 
     const escapacades = new Journal({
@@ -34,7 +35,7 @@ User.remove({}).then(() => {
     const vacation = new Post({
         name: 'Why I loved Hong Kong',
         image: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
-        city: 'Hong Kong',
+        postDescription: 'A vibrant city that fulfills the wonders of many',
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
@@ -48,7 +49,7 @@ User.remove({}).then(() => {
     const japanGuide = new Post({
         name: 'The must see things in Japan',
         image: 'https://enterprisectr.org/wp-content/uploads/2014/09/bobloblaw.jpg',
-        city: 'Japan',
+        postDescription: 'Everything one desires in a country full of wonders',
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 
@@ -63,7 +64,8 @@ User.remove({}).then(() => {
         email: 'philinvested@gmail.com',
         firstName: 'Phil',
         lastName: 'Lu',
-        photoUrl: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg'
+        photoUrl: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg',
+        description: "I'm a 28 years old software engineer that enjoys to travel."
     })
 }).then((phil) => {
     const backpacking = new Journal({
@@ -74,7 +76,7 @@ User.remove({}).then(() => {
     const londonEscape = new Post({
         name: 'Backpacking in London',
         image: 'https://pbs.twimg.com/profile_images/378800000134134212/81a38a74f2f122459e88a5f95987a139.jpeg',
-        city: 'London',
+        postDescription: 'The affordable way to travel and have fun',
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veritatis ipsam exercitationem temporibus accusamus itaque adipisci, commodi eveniet dolor necessitatibus quisquam aliquam nam voluptatum voluptate sed magnam amet, nesciunt debitis! '
     })
 

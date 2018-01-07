@@ -49,18 +49,18 @@ router.get('/:postId', (req, res) => {
     const postId = req.params.postId
 
     User.findById(userId)
-    .then((user) => {
-        const journal = user.journals.id(journalId)
-        const post = journal.posts.id(postId)
-        res.render('posts/show', {
-            userId,
-            journal,
-            post
+        .then((user) => {
+            const journal = user.journals.id(journalId)
+            const post = journal.posts.id(postId)
+            res.render('posts/show', {
+                userId,
+                journal,
+                post
+            })
         })
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .catch((error) => {
+            console.log(error)
+        })
 })
 
 

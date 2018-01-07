@@ -81,8 +81,6 @@ a {
   text-align: center;
 }
 
-
-
 .sign-up {
   background-image: url('https://source.unsplash.com/AlscQt7Utz4');
   background-repeat: no-repeat;
@@ -139,4 +137,23 @@ a {
 
 .post-content {
   padding: 15px;
+}
+
+.image-post {
+  width: 800px;
+  max-width: 100%;
+}
+
+.post-main {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.post-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 34px;
 }
