@@ -57,6 +57,9 @@ const UserSchema = new Schema({
         type: String,
         default: 'https://source.unsplash.com/random/'
     },
+    backgroundImage: {
+        type: String
+    },
     description: {
         type: String
     },
