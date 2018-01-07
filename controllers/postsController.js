@@ -53,6 +53,7 @@ router.get('/:postId', (req, res) => {
             const journal = user.journals.id(journalId)
             const post = journal.posts.id(postId)
             res.render('posts/show', {
+                user,
                 userId,
                 journal,
                 post

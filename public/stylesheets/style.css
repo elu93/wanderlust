@@ -157,3 +157,13 @@ a {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 34px;
 }
+
+.post-description {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 34px;
+  color: rgba(0,0,0,.54)
+}
+
+.first-post-p {
+  margin: 0 auto;
+}

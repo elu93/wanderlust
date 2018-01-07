@@ -10,9 +10,13 @@
       <input type="text" name="image">
     </div>
     <div class="form-input">
-      <label for="postDescription">City</label>
+      <label for="postDescription">Post Description</label>
       <input type="text" name="postDescription">
     </div>
+    <div class="input-field">
+          <label for="description">Body</label>
+          <textarea class="validate white-text" rows="4" cols="50" name="body"></textarea>
+        </div>
     <div>
         <input type="submit" value="Create Post">
         <a href="/users/{{userId}}/journals/{{journal._id}}" class="button warning">Cancel</a>

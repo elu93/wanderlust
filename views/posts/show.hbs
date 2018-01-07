@@ -1,12 +1,15 @@
 <div class="post-container">
   <div class="post-main">
     <div>
-      <img class="image-post" src="{{post.image}}" alt="">
       <div class="post-title">
-        <h5>{{post.name}}</h5>
+        <p class="first-post-p">{{post.name}}</p>
       </div>
       <div class="post-description">
-        {{post.postDescription}}
+        <h5>{{post.postDescription}}</h5>
+      </div>
+      <img class="image-post" src="{{post.image}}" alt="">
+      <div class="author">
+        <p>By: {{user.firstName}} {{user.lastName}}</p>
       </div>
       <div> {{post.body}}</div>
       <a class="button warning" href="/users/{{userId}}/journals/{{journal._id}}/posts/{{post._id}}/delete">Delete</a>
