@@ -5,11 +5,11 @@ body {
   height: 100%;
 }
 
-h2:first-child {
+.h2-post {
   color: white;
 }
 
-h3:first-child {
+.h3-post {
   margin: 0px;
 }
 
