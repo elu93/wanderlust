@@ -9,7 +9,7 @@
   {{#each journals}}
   <div class="col s12 m3">
     <a href="/users/{{../userId}}/journals/{{this._id}}">
-      <img class="image-journal" src="https://source.unsplash.com/random" alt=""> {{this.name}}
+      <img class="image-journal" src="{{this.journalPicture}}" alt=""> {{this.name}}
     </a>
   </div>
   {{/each}}

@@ -31,6 +31,10 @@ const JournalSchema = new Schema({
     category: {
         type: String
     },
+    journalPicture: {
+        type: String,
+        required: [true, 'Journal picture is required!']
+    },
     posts: [PostSchema]
 }, {
     timestamps: {},

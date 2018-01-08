@@ -32,7 +32,8 @@ User.remove({}).then(() => {
 
     const escapacades = new Journal({
         name: 'Hong Kong Discoveries',
-        category: 'Vacation Escapacades'
+        category: 'Vacation Escapacades',
+        journalPicture: 'https://source.unsplash.com/CSID46Dq4LA'
     })
     const vacation = new Post({
         name: 'Why I loved Hong Kong',
@@ -56,7 +57,8 @@ User.remove({}).then(() => {
 
     const guide = new Journal({
         name: 'Guide to Japan',
-        category: 'Guidebook'
+        category: 'Guidebook',
+        journalPicture: 'https://source.unsplash.com/dwKZyTMTr7o'
     })
     const japanGuide = new Post({
         name: 'The must see things in Japan',
@@ -75,7 +77,8 @@ User.remove({}).then(() => {
 
     const eatGuide = new Journal({
         name: 'Eating in Europe',
-        category: 'Nuggets of Food'
+        category: 'Nuggets of Food',
+        journalPicture: 'https://source.unsplash.com/IHpI0OVUzRk'
     })
     const europeGuide = new Post({
         name: 'The Food Joints You Must Go Check Out',
@@ -94,7 +97,8 @@ User.remove({}).then(() => {
 
     const travelGuide = new Journal({
         name: 'Iceland',
-        category: 'The Northern Lights'
+        category: 'The Northern Lights',
+        journalPicture: 'https://source.unsplash.com/wMzx2nBdeng'
     })
     const northernLights = new Post({
         name: 'The Celestial lights are truly breathtaking',
@@ -133,7 +137,8 @@ User.remove({}).then(() => {
 }).then((george) => {
     const backpacking = new Journal({
         name: 'Europe Backpacking',
-        category: 'Backpacking'
+        category: 'Backpacking',
+        journalPicture: 'https://source.unsplash.com/_q5H19c-VwU'
     })
 
     const londonEscape = new Post({
@@ -153,7 +158,8 @@ User.remove({}).then(() => {
 
     const hollywood = new Journal({
         name: 'Los Angeles',
-        category: 'Frollicking in LA'
+        category: 'Frollicking in LA',
+        journalPicture: 'https://source.unsplash.com/PC_lbSSxCZE'
     })
 
     const laTravels = new Post({
@@ -173,7 +179,8 @@ User.remove({}).then(() => {
 
     const newYork = new Journal({
         name: 'New York',
-        category: 'The Big Apple'
+        category: 'The Big Apple',
+        journalPicture: 'https://source.unsplash.com/Q9xdAzYJQyc'
     })
 
     const nyPost = new Post({
@@ -193,7 +200,8 @@ User.remove({}).then(() => {
 
     const amsterdam = new Journal({
         name: 'Amsterdam',
-        category: 'Europe Checklist'
+        category: 'Europe Checklist',
+        journalPicture: 'https://source.unsplash.com/q53E8d_ze2E'
     })
 
     const amsterdamPost = new Post({
@@ -231,7 +239,8 @@ User.remove({}).then(() => {
 }).then((rachel) => {
     const backpacking = new Journal({
         name: 'Europe Backpacking',
-        category: 'Backpacking'
+        category: 'Backpacking',
+        journalPicture: 'https://source.unsplash.com/_q5H19c-VwU'
     })
 
     const londonEscape = new Post({
@@ -251,7 +260,8 @@ User.remove({}).then(() => {
 
     const hollywood = new Journal({
         name: 'Los Angeles',
-        category: 'Frollicking in LA'
+        category: 'Frollicking in LA',
+        journalPicture: 'https://source.unsplash.com/PC_lbSSxCZE'
     })
 
     const laTravels = new Post({
@@ -271,7 +281,8 @@ User.remove({}).then(() => {
 
     const newYork = new Journal({
         name: 'New York',
-        category: 'The Big Apple'
+        category: 'The Big Apple',
+        journalPicture: 'https://source.unsplash.com/Q9xdAzYJQyc'
     })
 
     const nyPost = new Post({
@@ -291,7 +302,8 @@ User.remove({}).then(() => {
 
     const amsterdam = new Journal({
         name: 'Amsterdam',
-        category: 'Europe Checklist'
+        category: 'Europe Checklist',
+        journalPicture: 'https://source.unsplash.com/q53E8d_ze2E'
     })
 
     const amsterdamPost = new Post({
