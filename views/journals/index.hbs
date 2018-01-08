@@ -2,18 +2,15 @@
   <img class="journal-pro-image" src="{{user.photoUrl}}" alt="">
   <h5 class="journal-head">{{userFullName}}'s Journal</h5>
 </div>
-<div class="button primary">
+<div class="center-align">
   <a href="/users/{{userId}}/journals/new">Add a new journal</a>
 </div>
-<div class="journals">
+<div class="row">
   {{#each journals}}
-  <div class="store card">
-    <div>
-      <a href="/users/{{../userId}}/journals/{{this._id}}">
-        <h3>{{this.name}}</h3>
-      </a>
-    </div>
+  <div class="col s12 m3">
+    <a href="/users/{{../userId}}/journals/{{this._id}}">
+      <img class="image-journal" src="https://source.unsplash.com/random" alt=""> {{this.name}}
+    </a>
   </div>
-</div>
-{{/each}}
+  {{/each}}
 </div>
