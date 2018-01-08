@@ -230,6 +230,10 @@ a {
   background-color: #363131
 }
 
+imghover {
+  padding: 0 auto;
+}
+
 @media only screen and (max-width: 500px) {
   body {
     font-size: 1.5em;

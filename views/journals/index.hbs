@@ -8,9 +8,13 @@
 <div class="row">
   {{#each journals}}
   <div class="col s12 m3">
-    <a href="/users/{{../userId}}/journals/{{this._id}}">
-      <img class="image-journal" src="{{this.journalPicture}}" alt=""> {{this.name}}
-    </a>
+  <figure class="imghvr-fade">
+  <img src="{{this.journalPicture}}">
+  <figcaption class="black valign-wrapper">
+    <span class="imghover">{{this.name}}</span>
+  </figcaption>
+  <a href="/users/{{../userId}}/journals/{{this._id}}"></a>
+</figure>
   </div>
   {{/each}}
 </div>
