@@ -5,7 +5,7 @@ const Post = require('./models/Post')
 const mongoose = require('mongoose')
 
 // connect to database
-mongoose.connect('mongodb://localhost/travel_blog')
+mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.once('open', () => {
     console.log(`Mongoose has connected to MongoDB`)
