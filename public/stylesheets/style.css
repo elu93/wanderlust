@@ -257,7 +257,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) and (min-width: 992px) {
   body {
     font-size: 2em;
     margin: 0 auto;
@@ -292,5 +292,8 @@ a {
   }
   .first-post-p {
     font-size: 1.2em;
+  }
+  .pro-pics {
+    height: 30vh;
   }
 }
