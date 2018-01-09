@@ -13,3 +13,6 @@ https://trello.com/b/IBzJ9l7L/travel-blog-project-2
 ![alt text](https://github.com/elu93/wanderlust/blob/master/imgs/wireframe2.png "Wanderlust 2 Wireframe")
 ![alt text](https://github.com/elu93/wanderlust/blob/master/imgs/wireframe3.png "Wanderlust 3 Wireframe")
 
+# List of Technologies Used
+..* HTML
+..* CSS
